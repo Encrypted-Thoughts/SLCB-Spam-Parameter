@@ -37,7 +37,7 @@ Example Command: !command add !megaspam $spam(stream,5,400,false,$msg)
 
 Example in twitch chat:
 
-![exspample](https://imgur.com/a/gsroXzu)
+![exspample](https://user-images.githubusercontent.com/50642352/72397338-357d7500-3705-11ea-907e-46b987052662.png)
 
 ## Author
 
