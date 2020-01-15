@@ -34,6 +34,11 @@ Example Command: !command add !spam $spam(stream,1,400,false,THIS... IS... SPAM!
 Example Command: !command add !megaspam $spam(stream,5,400,false,PogChamp)
 Example Command: !command add !megaspam $spam(stream,5,400,false,$msg)
 ```
+
+Example in twitch chat:
+
+![exspample](https://imgur.com/a/gsroXzu)
+
 ## Author
 
 EncryptedThoughts - [Twitch](https://www.twitch.tv/encryptedthoughts)
