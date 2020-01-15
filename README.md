@@ -36,7 +36,7 @@ Example Command: !command add !megaspam $spam(stream,5,400,false,$msg)
 
 ## Author
 
-[EncryptedThoughts](https://www.twitch.tv/encryptedthoughts)
+EncryptedThoughts - [Twitch](https://www.twitch.tv/encryptedthoughts)
 
 ## License
 
