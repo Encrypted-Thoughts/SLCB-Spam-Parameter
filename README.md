@@ -15,7 +15,7 @@ https://github.com/StreamlabsSupport/Streamlabs-Chatbot/wiki/Prepare-&-Import-Sc
 Once installed the below parameter can be inserted into custom commands created in SLCB.
 Note: If the parameter is used everything else in the message outside of the first instance
 of the parameters use will be ignore. 
-
+```
 $spam(
     (stream|discord),   # Chat Type: Specify whether to post the message to stream or to discord
                           Note: If set to stream and command called in discord. bot will post in 
@@ -33,7 +33,7 @@ $spam(
 Example Command: !command add !spam $spam(stream,1,400,false,THIS... IS... SPAM!!!)
 Example Command: !command add !megaspam $spam(stream,5,400,false,PogChamp)
 Example Command: !command add !megaspam $spam(stream,5,400,false,$msg)
-
+```
 ## Author
 
 EncryptedThoughts - [Twitch](https://www.twitch.tv/encryptedthoughts)
