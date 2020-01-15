@@ -1,33 +1,20 @@
-========================================================================================
-=======================================[ Credits ]=======================================
-=========================================================================================
-
-Script made by:         EncryptedThoughts
-Twitch:                 http://www.twitch.tv/EncryptedThoughts
-
-=========================================================================================
-=======================================[ Script Changes ]================================
-=========================================================================================
-
-1.0.0 - Script made. Only tested with Twitch and Discord.
-
-=========================================================================================
-==================================[ Future implementations ]=============================
-=========================================================================================
-
-I dunno, whatcha want it to do?
-
-=========================================================================================
-=======================================[ About ]=========================================
-=========================================================================================
+# SLCB Spam Parameter
 
 The Spam Parameter allows for creating custom commands to take user input, duplicate it
 a specified number of times, and then have the bot post it to chat a specified number
 of times.
 
-=========================================================================================
-=======================================[ Instructions ]==================================
-=========================================================================================
+## Installing
+
+This script was built for use with Streamlabs Chatbot.
+Follow instructions on how to install custom script packs at:
+https://github.com/StreamlabsSupport/Streamlabs-Chatbot/wiki/Prepare-&-Import-Scripts
+
+## Use
+
+Once installed the below parameter can be inserted into custom commands created in SLCB.
+Note: If the parameter is used everything else in the message outside of the first instance
+of the parameters use will be ignore. 
 
 $spam(
     (stream|discord),   # Chat Type: Specify whether to post the message to stream or to discord
@@ -46,3 +33,11 @@ $spam(
 Example Command: !command add !spam $spam(stream,1,400,false,THIS... IS... SPAM!!!)
 Example Command: !command add !megaspam $spam(stream,5,400,false,PogChamp)
 Example Command: !command add !megaspam $spam(stream,5,400,false,$msg)
+
+## Author
+
+[EncryptedThoughts](https://www.twitch.tv/encryptedthoughts)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
