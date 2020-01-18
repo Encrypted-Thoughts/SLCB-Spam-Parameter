@@ -1,12 +1,5 @@
 {
 	"output_file": "settings.json",
-	"EnableDebug": {
-		"type": "checkbox",
-		"value": false,
-		"label": "Enable Debug",
-		"tooltip": "Enable or disable debug logs",
-		"group": ""
-	},
 	"btnreadme": {
 		"type": "button",
 		"label": "open readme",
@@ -14,5 +7,12 @@
 		"wsevent": "",
 		"function": "openreadme",
 		"group": ""
+	},
+	"EnableDebug": {
+		"type": "checkbox",
+		"value": false,
+		"label": "Enable Debug",
+		"tooltip": "Enable or disable debug logs",
+		"group": "Debug Settings"
 	}
 }

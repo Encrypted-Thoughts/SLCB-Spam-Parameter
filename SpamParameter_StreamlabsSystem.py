@@ -32,7 +32,6 @@ class Settings(object):
                 self.__dict__ = json.load(f, encoding="utf-8")
         else:
             self.EnableDebug = True
-            Parent.Log(ScriptName, "Failed to read setting from file")
 
     def Reload(self, jsondata):
         self.__dict__ = json.loads(jsondata, encoding="utf-8")
@@ -48,26 +47,21 @@ class Settings(object):
             Parent.Log(ScriptName, "Failed to save settings to file.")
         return
 
-#---------------------------------------
-# Settings functions
-#---------------------------------------
-
-def ReloadSettings(jsondata):
-    ScriptSettings.Reload(jsondata)
-
-def SaveSettings(self, SettingsFile):
-    with codecs.open(SettingsFile, encoding='utf-8-sig', mode='w+') as f:
-        json.dump(self.__dict__, f, encoding='utf-8-sig')
-    with codecs.open(SettingsFile.replace("json", "js"), encoding='utf-8-sig', mode='w+') as f:
-        f.write("var settings = {0};".format(json.dumps(self.__dict__, encoding='utf-8-sig')))
-    return
-
 #---------------------------
 #   [Required] Initialize Data (Only called on load)
 #---------------------------
 def Init():
     global ScriptSettings
     ScriptSettings = Settings(SettingsFile)
+    ScriptSettings.Save(SettingsFile)
+    return
+
+#---------------------------
+#   [Optional] Reload Settings (Called when a user clicks the Save Settings button in the Chatbot UI)
+#---------------------------
+def ReloadSettings(jsonData):
+    # Execute json reloading here
+    ScriptSettings.__dict__ = json.loads(jsonData)
     ScriptSettings.Save(SettingsFile)
     return
 
@@ -147,14 +141,6 @@ def Parse(parseString, userid, username, targetid, targetname, message):
         Parent.Log(ScriptName, "Spamming completed... Back to the shadows I go...")
 
     return 
-#---------------------------
-#   [Optional] Reload Settings (Called when a user clicks the Save Settings button in the Chatbot UI)
-#---------------------------
-def ReloadSettings(jsonData):
-    # Execute json reloading here
-    ScriptSettings.__dict__ = json.loads(jsonData)
-    ScriptSettings.Save(SettingsFile)
-    return
 
 #---------------------------
 #   [Optional] Unload (Called when a user reloads their scripts or closes the bot / cleanup stuff)
