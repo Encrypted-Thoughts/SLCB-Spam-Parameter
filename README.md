@@ -10,6 +10,8 @@ This script was built for use with Streamlabs Chatbot.
 Follow instructions on how to install custom script packs at:
 https://github.com/StreamlabsSupport/Streamlabs-Chatbot/wiki/Prepare-&-Import-Scripts
 
+Click [Here](SpamParameter.zip) to download the script pack.
+
 ## Use
 
 Once installed the below parameter can be inserted into custom commands created in SLCB.
